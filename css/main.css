@@ -1,0 +1,344 @@
+/* Instagram Colors */
+:root {
+    --ig-primary: #0095f6;
+    --ig-primary-hover: #1877f2;
+    --ig-secondary: #385185;
+    --ig-link: #00376b;
+    --ig-error: #ed4956;
+    --ig-separator: #dbdbdb;
+    --ig-border: #dbdbdb;
+    --ig-background: #FFFFFF;
+    --ig-text-primary: #262626;
+    --ig-text-secondary: #8e8e8e;
+    --ig-facebook: #385185;
+    --ig-white: #ffffff;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--ig-background);
+    color: var(--ig-text-primary);
+    font-size: 14px;
+    line-height: 18px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Main Container */
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+/* Login Section - Contains both promo image and login form */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 935px;
+    margin: 32px auto 0;
+    padding: 0 20px;
+}
+
+/* Promo Image Container */
+.promo-image-container {
+    display: block; /* Always show it */
+    flex-basis: 454px;
+    position: relative;
+}
+
+.promo-image {
+    max-width: 100%;
+    height: auto;
+    margin-right: 32px;
+    display: block; /* Ensure it's block level */
+}
+
+/* Login container and wrapper */
+.login-container {
+    flex-grow: 1;
+    max-width: 350px;
+    width: 100%;
+}
+
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin: 36px 0 12px;
+}
+
+.instagram-logo-text {
+    width: 175px;
+    margin: 22px auto 36px;
+}
+
+/* Login Box */
+.login-box {
+    background-color: var(--ig-white);
+    border: 1px solid var(--ig-border);
+    border-radius: 1px;
+    padding: 20px 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Input Styles */
+.input-group {
+    margin-bottom: 6px;
+}
+
+input {
+    background: var(--ig-background);
+    border: 1px solid var(--ig-border);
+    border-radius: 3px;
+    color: var(--ig-text-primary);
+    font-size: 14px;
+    padding: 9px 8px 7px;
+    width: 100%;
+    height: 36px;
+}
+
+input::placeholder {
+    color: var(--ig-text-secondary);
+}
+
+input:focus {
+    border-color: #a8a8a8;
+    outline: none;
+}
+
+/* Login Button */
+.login-button {
+    background-color: var(--ig-primary);
+    border: none;
+    border-radius: 8px;
+    color: var(--ig-white);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 7px 16px;
+    width: 100%;
+    margin: 8px 0;
+    cursor: pointer;
+    height: 32px;
+    transition: background-color 0.2s ease;
+}
+
+.login-button:hover {
+    background-color: var(--ig-primary-hover);
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 18px 0;
+}
+
+.divider-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--ig-separator);
+}
+
+.divider-text {
+    color: var(--ig-text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0 18px;
+    text-transform: uppercase;
+}
+
+/* Facebook Login */
+.facebook-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 0;
+    cursor: pointer;
+    color: var(--ig-facebook);
+    text-decoration: none;
+}
+
+.facebook-login svg {
+    margin-right: 8px;
+}
+
+.facebook-login span {
+    color: var(--ig-facebook);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.facebook-login:hover {
+    text-decoration: none;
+}
+
+/* Forgot Password */
+.forgot-password {
+    color: var(--ig-link);
+    font-size: 12px;
+    text-decoration: none;
+    display: block;
+    margin-top: 12px;
+}
+
+/* Signup Box */
+.signup-box {
+    background-color: var(--ig-white);
+    border: 1px solid var(--ig-border);
+    border-radius: 1px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.signup-box p {
+    font-size: 14px;
+}
+
+.signup-link {
+    color: var(--ig-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.signup-link:hover {
+    text-decoration: none;
+}
+
+/* App Download */
+.app-download {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.app-download p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.app-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.app-buttons img {
+    height: 40px;
+    object-fit: contain;
+    border-radius: 7px;
+}
+
+/* Footer */
+.footer {
+    padding: 20px 0 52px;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+    color: var(--ig-text-secondary);
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 16px;
+    margin-bottom: 16px;
+    max-width: 935px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 16px;
+}
+
+.footer-links a {
+    color: var(--ig-text-secondary);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--ig-text-secondary);
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.copyright {
+    color: var(--ig-text-secondary);
+}
+
+/* Responsive Styles */
+@media (max-width: 875px) {
+    /* Hide promo image on smaller screens */
+    .promo-image-container {
+        display: none;
+    }
+    
+    .login-section {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 876px) {
+    /* Ensure the promo image is visible on desktop */
+    .promo-image-container {
+        display: block !important;
+    }
+    
+    .login-section {
+        flex-direction: row;
+        padding: 32px 0;
+    }
+    
+    .footer {
+        margin-top: 0;
+    }
+} 

